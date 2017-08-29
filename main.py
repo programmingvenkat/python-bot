@@ -57,4 +57,7 @@ def wikiSearch(bot, update):
 search_handler = CommandHandler('search', wikiSearch)
 dispatcher.add_handler(search_handler)
 
-updater.start_polling()
+PORT = int(os.environ.get('PORT', '5000'))
+updater.start_webhook(listen='0.0.0.0', port=PORT, url_path='443409571:AAEUtkX0T74kJFotCl57ORJRJBl-fBeZQ-Q')
+updater.bot.setWebhook("https://the-anti-spammer.herokuapp.com/" + '443409571:AAEUtkX0T74kJFotCl57ORJRJBl-fBeZQ-Q')
+updater.idle()
