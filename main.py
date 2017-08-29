@@ -4,7 +4,7 @@ from telegram.ext import Updater
 from telegram.ext import CommandHandler
 import logging
 import wikipedia
-
+import os
 
 
 updater = Updater(token='443409571:AAEUtkX0T74kJFotCl57ORJRJBl-fBeZQ-Q')
