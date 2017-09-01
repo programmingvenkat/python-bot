@@ -1,0 +1,1 @@
+change markdown and text to getWikiSearch() method instead of wikiSearch()
