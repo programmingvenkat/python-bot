@@ -82,10 +82,11 @@ search_handler = CommandHandler('search', wikiSearch)
 dispatcher.add_handler(search_handler)
 
 
-updater.start_polling()  # USE FOR LOCAL TESTING ONLY
+#updater.start_polling()  # USE FOR LOCAL TESTING ONLY
 
 '''And finally initiate heroku servers'''
-#PORT = int(os.environ.get('PORT', '5000'))
-#updater.start_webhook(listen='0.0.0.0', port=PORT, url_path='443409571:AAEUtkX0T74kJFotCl57ORJRJBl-fBeZQ-Q')
-#updater.bot.setWebhook("https://the-anti-spammer.herokuapp.com/" + '443409571:AAEUtkX0T74kJFotCl57ORJRJBl-fBeZQ-Q')
-#updater.idle()
+PORT = int(os.environ.get('PORT', '5000'))
+updater.start_webhook(listen='0.0.0.0', port=PORT, url_path='443409571:AAEUtkX0T74kJFotCl57ORJRJBl-fBeZQ-Q')
+updater.bot.setWebhook("https://the-anti-spammer.herokuapp.com/" + '443409571:AAEUtkX0T74kJFotCl57ORJRJBl-fBeZQ-Q')
+
+updater.idle()
